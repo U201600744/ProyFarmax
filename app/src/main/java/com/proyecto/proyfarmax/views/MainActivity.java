@@ -1,4 +1,4 @@
-package com.proyecto.proyfarmax;
+package com.proyecto.proyfarmax.views;
 
 import androidx.appcompat.app.AppCompatActivity;
 
