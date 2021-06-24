@@ -1,4 +1,4 @@
-package com.proyecto.proyfarmax;
+package com.proyecto.proyfarmax.views;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,7 +13,8 @@ import android.widget.EditText;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.proyecto.proyfarmax.modelo.Producto;
+import com.proyecto.proyfarmax.R;
+import com.proyecto.proyfarmax.entities.Producto;
 
 import java.util.UUID;
 
@@ -56,6 +57,7 @@ public class RegistrarActivity extends AppCompatActivity {
         detalle = txtDetalle.getText().toString();
         Producto p = new Producto();
         p.setId(UUID.randomUUID().toString());
+        p.setNombreProducto(nombreProducto);
         p.setStock(Integer.parseInt(stock));
         p.setPrecio(Double.parseDouble(precio));
         p.setDetalle(detalle);

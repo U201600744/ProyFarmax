@@ -1,4 +1,4 @@
-package com.proyecto.proyfarmax.modelo;
+package com.proyecto.proyfarmax.entities;
 
 import android.widget.ImageView;
 

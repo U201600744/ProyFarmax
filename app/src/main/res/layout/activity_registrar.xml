@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistrarActivity"
+    tools:context=".views.RegistrarActivity"
     android:padding="20dp">
 
     <TextView
@@ -14,7 +14,7 @@
         android:layout_marginStart="205dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="148dp"
-        android:text="REGISTRAR PERSONA"
+        android:text="REGISTRAR PRODUCTO"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.853"
         app:layout_constraintStart_toStartOf="parent"
