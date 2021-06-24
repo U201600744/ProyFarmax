@@ -1,4 +1,4 @@
-package com.proyecto.proyfarmax;
+package com.proyecto.proyfarmax.views;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +19,8 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.proyecto.proyfarmax.R;
 
 public class MainActivity extends AppCompatActivity {
 
