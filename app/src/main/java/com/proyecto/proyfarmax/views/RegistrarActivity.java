@@ -57,6 +57,7 @@ public class RegistrarActivity extends AppCompatActivity {
         detalle = txtDetalle.getText().toString();
         Producto p = new Producto();
         p.setId(UUID.randomUUID().toString());
+        p.setNombreProducto(nombreProducto);
         p.setStock(Integer.parseInt(stock));
         p.setPrecio(Double.parseDouble(precio));
         p.setDetalle(detalle);

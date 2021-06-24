@@ -23,6 +23,7 @@ import java.util.List;
 import com.proyecto.proyfarmax.AdaptadorProducto;
 import com.proyecto.proyfarmax.ItemProducto;
 import com.proyecto.proyfarmax.R;
+import com.proyecto.proyfarmax.entities.Producto;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     AdaptadorProducto adaptadorProducto;
-    ArrayList<ItemProducto> list;
+    ArrayList<Producto> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,8 +69,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                    ItemProducto itemProducto = dataSnapshot.getValue(ItemProducto.class);
-                    list.add(itemProducto);
+                    Producto Producto = dataSnapshot.getValue(Producto.class);
+                    list.add(Producto);
 
                 }
                 adaptadorProducto.notifyDataSetChanged();
