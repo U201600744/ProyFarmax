@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyFarmax"
         android:usesCleartextTraffic="true">
-        <activity android:name=".RegistrarActivity" android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".views.RegistrarActivity" android:parentActivityName="views.MainActivity"></activity>
 
         <activity android:name=".views.MainActivity">
             <intent-filter>

@@ -20,6 +20,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.proyecto.proyfarmax.AdaptadorProducto;
+import com.proyecto.proyfarmax.ItemProducto;
 import com.proyecto.proyfarmax.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -61,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         list = new ArrayList<>();
         adaptadorProducto = new AdaptadorProducto(this,list);
         recyclerView.setAdapter(adaptadorProducto);
+
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
