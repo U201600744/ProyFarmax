@@ -71,7 +71,6 @@ public class MainActivity extends AppCompatActivity {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                     Producto Producto = dataSnapshot.getValue(Producto.class);
                     list.add(Producto);
-
                 }
                 adaptadorProducto.notifyDataSetChanged();
 
