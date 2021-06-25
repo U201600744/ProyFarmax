@@ -10,6 +10,9 @@ public class Producto {
     private Double precio;
     private String detalle;
 
+
+
+
     public String getId() {
         return id;
     }

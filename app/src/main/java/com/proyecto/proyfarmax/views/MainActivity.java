@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         asignarReferencias();
         inicializarFirebase();
         listarDatos();
+
     }
 
     private void asignarReferencias(){

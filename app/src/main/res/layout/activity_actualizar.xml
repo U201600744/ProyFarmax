@@ -14,24 +14,11 @@
         android:layout_marginStart="205dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="148dp"
-        android:text="REGISTRAR PRODUCTO"
+        android:text="ACTUALIZAR PRODUCTO"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.853"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnSubir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="500dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:text="SUBIR IMAGEN"
-        app:layout_constraintBottom_toTopOf="@+id/txtNombreProducto"
-        app:layout_constraintEnd_toStartOf="@+id/textView2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
         android:id="@+id/txtNombreProducto"
@@ -43,7 +30,7 @@
         android:hint="Ingrese Nombre Producto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSubir" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
         android:id="@+id/txtStock"
@@ -84,15 +71,14 @@
         app:layout_constraintTop_toBottomOf="@+id/txtPrecio" />
 
     <Button
-        android:id="@+id/btnRegistrar"
+        android:id="@+id/btnActualizar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="158dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="159dp"
-        android:text="Guardar"
+        android:text="ACTUALIZAR"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDetalle" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
