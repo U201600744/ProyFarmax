@@ -8,9 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
-import com.google.android.gms.auth.api.signin.internal.Storage;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DataSnapshot;
@@ -20,11 +18,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import com.google.firebase.storage.StorageReference;
 import com.proyecto.proyfarmax.AdaptadorProducto;
-import com.proyecto.proyfarmax.ItemProducto;
 import com.proyecto.proyfarmax.R;
 import com.proyecto.proyfarmax.entities.Producto;
 
@@ -38,10 +33,6 @@ public class MainActivity extends AppCompatActivity {
     AdaptadorProducto adaptadorProducto;
     ArrayList<Producto> list;
 
-    private Button myUploadButton;
-    private StorageReference myStorage;
-    private static final int GALLERY_INTENT = 1;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,19 +40,6 @@ public class MainActivity extends AppCompatActivity {
         asignarReferencias();
         inicializarFirebase();
         listarDatos();
-        myUploadButton = (Button) findViewById(R.id.btnSubir);
-
-        myUploadButton.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(Intent.ACTION_PICK);
-                intent.setType("image/*");
-                startActivityForResult(intent, GALLERY_INTENT);
-
-            }
-        });
     }
 
     private void asignarReferencias(){
