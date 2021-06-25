@@ -94,7 +94,7 @@
                 android:layout_margin="14dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@mipmap/ic_editar1_foreground" />
+                app:srcCompat="@mipmap/editar" />
 
         </LinearLayout>
 

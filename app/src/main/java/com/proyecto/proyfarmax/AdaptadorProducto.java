@@ -5,25 +5,17 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.database.FirebaseDatabase;
-import com.orhanobut.dialogplus.DialogPlus;
-import com.orhanobut.dialogplus.ViewHolder;
 import com.proyecto.proyfarmax.entities.Producto;
-import com.proyecto.proyfarmax.views.RegistrarActivity;
+import com.proyecto.proyfarmax.views.EditarActivity;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+
 
 public class AdaptadorProducto extends RecyclerView.Adapter<AdaptadorProducto.MyViewHolder> {
 
@@ -53,7 +45,7 @@ public class AdaptadorProducto extends RecyclerView.Adapter<AdaptadorProducto.My
         holder.btnEditar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, RegistrarActivity.class);
+                Intent intent = new Intent(context, EditarActivity.class);
                 intent.putExtra("id",list.get(position).getId()+"");
                 intent.putExtra("nombre",list.get(position).getNombreProducto()+"");
                 intent.putExtra("stock",list.get(position).getStock()+"");
