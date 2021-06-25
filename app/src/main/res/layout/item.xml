@@ -130,9 +130,21 @@
                 android:paddingBottom="15dp"
                 app:srcCompat="@mipmap/ic_eliminar4_foreground" />
 
+
+            <ImageButton
+                android:id="@+id/btnEditar"
+                android:layout_width="53dp"
+                android:layout_height="72dp"
+                android:layout_margin="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/editar" />
+
         </LinearLayout>
 
     </LinearLayout>
+
+
 
 
 </androidx.cardview.widget.CardView>
