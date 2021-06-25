@@ -22,14 +22,14 @@
 
     <Button
         android:id="@+id/btnSubir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="500dp"
+        android:layout_width="150dp"
+        android:layout_height="108dp"
+        android:layout_marginStart="200dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:text="SUBIR IMAGEN"
         app:layout_constraintBottom_toTopOf="@+id/txtNombreProducto"
-        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 

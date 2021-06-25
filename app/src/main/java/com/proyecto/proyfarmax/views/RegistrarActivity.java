@@ -28,9 +28,6 @@ public class RegistrarActivity extends AppCompatActivity {
     String id;
     boolean registra = true;
 
-    String id;
-    boolean registra = true;
-
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
 
