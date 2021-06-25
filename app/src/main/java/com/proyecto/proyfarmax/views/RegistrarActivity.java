@@ -45,7 +45,9 @@ public class RegistrarActivity extends AppCompatActivity {
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                registrar();
+                if (validarCampos()){
+                    registrar();
+                }
             }
         });
     }
@@ -80,6 +82,36 @@ public class RegistrarActivity extends AppCompatActivity {
         FirebaseApp.initializeApp(this);
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference();
+    }
+
+    public boolean validarCampos(){
+        boolean r = true;
+        nombreProducto = txtNombreProducto.getText().toString();
+        stock = txtStock.getText().toString();
+        precio = txtPrecio.getText().toString();
+        detalle = txtDetalle.getText().toString();
+
+        if (nombreProducto.equals("")){
+            txtNombreProducto.setError("Nombre de Producto Obligatorio");
+            r = false;
+        }
+
+        if (stock.equals("")){
+            txtStock.setError("Stock de Producto Obligatorio");
+            r = false;
+        }
+
+        if (precio.equals("")){
+            txtPrecio.setError("Precio de Producto Obligatorio");
+            r = false;
+        }
+
+        if (detalle.equals("")){
+            txtDetalle.setError("Detalle de Producto Obligatorio");
+            r = false;
+        }
+
+        return r;
     }
 
 }
