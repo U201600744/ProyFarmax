@@ -40,13 +40,14 @@ public class RegistrarActivity extends AppCompatActivity {
         inicializarFirebase();
     }
 
+
     private void recibirDatos() {
         if(getIntent().hasExtra("id")) {
             registra = false;
             id = getIntent().getStringExtra("id");
             nombreProducto =getIntent().getStringExtra("nombre");
             stock =getIntent().getStringExtra("stock");
-            //  precio = Double.parseDouble(getIntent().getStringExtra("precio"));
+            precio =getIntent().getStringExtra("precio");
             detalle =getIntent().getStringExtra("detalle");
 
             txtNombreProducto.setText(nombreProducto);
@@ -111,7 +112,7 @@ public class RegistrarActivity extends AppCompatActivity {
         //p.setId(UUID.randomUUID().toString());
         p.setNombreProducto(nombreProducto);
         p.setStock(Integer.parseInt(stock));
-        //p.setPrecio(Double.parseDouble(precio));
+        p.setPrecio(Double.parseDouble(precio));
         p.setDetalle(detalle);
 
         databaseReference.child("Producto").child(p.getId()).setValue(p);
@@ -127,7 +128,6 @@ public class RegistrarActivity extends AppCompatActivity {
         });
         ventana.create().show();
     }
-
     private void inicializarFirebase(){
         FirebaseApp.initializeApp(this);
         firebaseDatabase = FirebaseDatabase.getInstance();
