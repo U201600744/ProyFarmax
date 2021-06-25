@@ -103,7 +103,7 @@ public class RegistrarActivity extends AppCompatActivity {
     }
     private void modificar(){
         Producto p = new Producto();
-        p.setId(UUID.randomUUID().toString());
+        p.setId(id);
         nombreProducto = txtNombreProducto.getText().toString();
         stock = txtStock.getText().toString();
         precio = txtPrecio.getText().toString();

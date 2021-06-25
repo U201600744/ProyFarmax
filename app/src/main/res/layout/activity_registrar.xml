@@ -77,7 +77,7 @@
         android:layout_marginStart="158dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="159dp"
-        android:text="REGISTRAR PRODUCTO"
+        android:text="Guardar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDetalle" />
