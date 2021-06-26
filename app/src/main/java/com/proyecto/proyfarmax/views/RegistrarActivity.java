@@ -81,12 +81,11 @@ public class RegistrarActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (validarCampos()){
-                    registrar();
-                }
-                if(registra == true){
-                    registrar();
-                }else{
-                    modificar();
+                    if(registra == true){
+                        registrar();
+                    }else{
+                        modificar();
+                    }
                 }
             }
         });
