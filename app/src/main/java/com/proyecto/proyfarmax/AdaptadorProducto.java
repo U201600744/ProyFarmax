@@ -4,7 +4,6 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -112,9 +111,9 @@ public class AdaptadorProducto extends RecyclerView.Adapter<AdaptadorProducto.My
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            tvNombreProducto = itemView.findViewById(R.id.tvNombreProducto);
-            tvStock = itemView.findViewById(R.id.tvStock);
-            tvPrecio = itemView.findViewById(R.id.tvPrecio);
+            tvNombreProducto = itemView.findViewById(R.id.filanombre);
+            tvStock = itemView.findViewById(R.id.filacelular);
+            tvPrecio = itemView.findViewById(R.id.filadireccion);
             btnEliminar = itemView.findViewById(R.id.btnEliminar);
             btnEditar = itemView.findViewById(R.id.btnEditar);
         }

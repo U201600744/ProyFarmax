@@ -21,22 +21,22 @@
             android:layout_gravity="center_vertical"
             android:orientation="horizontal" >
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="Nombre Producto: "
-            android:gravity="left"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="Nombres y Apellidos:"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
         <TextView
             android:id="@+id/filanombre"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Producto1"
+            android:hint="Ingrese Nombres"
             android:gravity="left"
             android:textColor="@color/black"
             android:textSize="16sp" />
@@ -51,10 +51,10 @@
 
             <TextView
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="Stock: "
+                android:layout_weight="1"
                 android:gravity="left"
+                android:text="Celular"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -62,10 +62,10 @@
             <TextView
                 android:id="@+id/filacelular"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="Stock1"
+                android:layout_weight="1"
                 android:gravity="left"
+                android:hint="Ingrese celular"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
@@ -80,21 +80,20 @@
 
             <TextView
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="Precio: "
+                android:layout_weight="1"
                 android:gravity="left"
+                android:text="Direccion:"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                android:textStyle="bold"
-                />
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/filadireccion"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="Precio1"
+                android:hint="Ingrese Direccion"
                 android:gravity="left"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
