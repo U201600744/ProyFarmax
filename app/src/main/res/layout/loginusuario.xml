@@ -53,11 +53,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
-        android:layout_marginEnd="70dp"
-        android:nextFocusLeft="@color/plomo"
         android:drawableLeft="@drawable/ic_ingresar"
+        android:nextFocusLeft="@color/plomo"
         android:text="Ingresar"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
 
     <Button
