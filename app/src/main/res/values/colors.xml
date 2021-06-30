@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="free">#505050</color>
     <color name="upc">#e31c1f</color>
+    <color name="simbolos">#00A6FF</color>
+    <color name="plomo">#444444</color>
 </resources>
