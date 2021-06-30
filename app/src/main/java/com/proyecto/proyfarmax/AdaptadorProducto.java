@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,8 +18,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.proyecto.proyfarmax.entities.Producto;
 import com.proyecto.proyfarmax.views.MainActivity;
+import com.proyecto.proyfarmax.views.EditarActivity;
 
 import java.util.ArrayList;
+
 
 public class AdaptadorProducto extends RecyclerView.Adapter<AdaptadorProducto.MyViewHolder> {
 
@@ -26,6 +29,7 @@ public class AdaptadorProducto extends RecyclerView.Adapter<AdaptadorProducto.My
     ArrayList<Producto> list;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+
 
     public AdaptadorProducto(Context context, ArrayList<Producto> list) {
         this.context = context;
@@ -77,6 +81,21 @@ public class AdaptadorProducto extends RecyclerView.Adapter<AdaptadorProducto.My
                 ventana.create().show();
             }
         });
+        holder.btnEditar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, EditarActivity.class);
+                intent.putExtra("id",list.get(position).getId()+"");
+                intent.putExtra("nombre",list.get(position).getNombreProducto()+"");
+                intent.putExtra("stock",list.get(position).getStock()+"");
+                intent.putExtra("precio",list.get(position).getPrecio()+"");
+                intent.putExtra("detalles",list.get(position).getDetalle()+"");
+                context.startActivity(intent);
+
+            }
+
+
+        });
     }
 
     @Override
@@ -89,6 +108,7 @@ public class AdaptadorProducto extends RecyclerView.Adapter<AdaptadorProducto.My
         TextView tvNombreProducto, tvStock, tvPrecio;
         ImageButton btnEliminar;
 
+        ImageButton btnEditar;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -96,6 +116,7 @@ public class AdaptadorProducto extends RecyclerView.Adapter<AdaptadorProducto.My
             tvStock = itemView.findViewById(R.id.tvStock);
             tvPrecio = itemView.findViewById(R.id.tvPrecio);
             btnEliminar = itemView.findViewById(R.id.btnEliminar);
+            btnEditar = itemView.findViewById(R.id.btnEditar);
         }
     }
 

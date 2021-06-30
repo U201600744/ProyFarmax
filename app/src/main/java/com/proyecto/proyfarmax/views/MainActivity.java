@@ -21,10 +21,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import com.proyecto.proyfarmax.AdaptadorProducto;
-import com.proyecto.proyfarmax.ItemProducto;
 import com.proyecto.proyfarmax.R;
 import com.proyecto.proyfarmax.entities.Producto;
 
@@ -45,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         asignarReferencias();
         inicializarFirebase();
         listarDatos();
+
     }
 
     private void asignarReferencias(){
