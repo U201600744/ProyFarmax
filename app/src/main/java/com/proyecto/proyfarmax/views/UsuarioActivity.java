@@ -51,6 +51,7 @@ public class UsuarioActivity extends AppCompatActivity {
             databaseReference.child("Usuario").addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull  DataSnapshot snapshot) {
+                   listaUsuario.clear();
                     for(DataSnapshot item: snapshot.getChildren()){
                         Usuario u = item.getValue(Usuario.class);
                         listaUsuario.add(u);
