@@ -90,6 +90,7 @@
         android:text="Nombres:"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toBottomOf="@+id/txttipodocumento" />
 
     <EditText
@@ -195,6 +196,7 @@
         android:text="Celular:"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toBottomOf="@+id/txtcorreo" />
 
     <EditText
@@ -228,10 +230,11 @@
         android:id="@+id/txtdepartamento"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="Seleccione"
+        android:inputType="textPersonName"
         android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
@@ -317,6 +320,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtprovincia" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
