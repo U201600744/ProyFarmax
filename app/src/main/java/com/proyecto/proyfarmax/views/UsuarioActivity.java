@@ -3,7 +3,6 @@ package com.proyecto.proyfarmax.views;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,7 +33,7 @@ public class UsuarioActivity extends AppCompatActivity {
         DatabaseReference databaseReference;
 
         private List<Usuario> listaUsuario = new ArrayList<>();
-       // ArrayAdapter<Usuario> adaptador;
+
     AdaptadorUsuario adaptador;
 
         @Override
@@ -80,7 +79,7 @@ public class UsuarioActivity extends AppCompatActivity {
             btnNuevo.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(UsuarioActivity.this, RegistrarUsuarioActivity.class);
+                    Intent intent = new Intent(UsuarioActivity.this,RegistrarUsuarioActivity.class);
                     startActivity(intent);
                 }
             });
