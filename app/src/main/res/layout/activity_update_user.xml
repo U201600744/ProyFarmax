@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="4dp">
+    tools:context=".views.UpdateUserActivity">
+
 
     <ImageView
         android:id="@+id/imageView2"
@@ -21,7 +21,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Actualizar Usuarios"
+        android:text="Actulizar Usuarios"
         android:textColor="@color/simbolos"
         android:textSize="18dp"
         android:textStyle="bold"
@@ -57,11 +57,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:drawableStart="@drawable/ic_tipodocumento"
+        android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Tipo de Documento"
         android:inputType="textPersonName"
         android:paddingHorizontal="10dp"
-        android:drawablePadding="10dp"
         android:textSize="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
@@ -72,11 +72,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:drawableStart="@drawable/ic_tipodocumento"
+        android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Agregar Numero"
         android:inputType="textPersonName"
         android:paddingHorizontal="10dp"
-        android:drawablePadding="10dp"
         android:textSize="10dp"
         app:layout_constraintStart_toEndOf="@+id/txttipodocumento"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
@@ -128,9 +128,9 @@
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Ingresar Apellidos"
-        android:textSize="15dp"
         android:inputType="textPersonName"
         android:paddingHorizontal="10dp"
+        android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -255,8 +255,8 @@
         android:layout_marginStart="26dp"
         android:ems="10"
         android:hint="Seleccione"
-        android:textSize="15dp"
         android:inputType="textPersonName"
+        android:textSize="15dp"
         app:layout_constraintStart_toEndOf="@+id/txtdepartamento"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
@@ -277,8 +277,8 @@
         android:layout_marginStart="26dp"
         android:ems="10"
         android:hint="Seleccione"
-        android:textSize="15dp"
         android:inputType="textPersonName"
+        android:textSize="15dp"
         app:layout_constraintStart_toEndOf="@+id/txtprovincia"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
@@ -299,11 +299,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:drawableStart="@drawable/ic_contrasena"
-        android:hint="Ingrese Password"
-        android:textSize="15dp"
-        android:paddingHorizontal="10dp"
         android:drawablePadding="10dp"
+        android:hint="Ingrese Password"
         android:inputType="textPassword"
+        android:paddingHorizontal="10dp"
+        android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
@@ -313,7 +313,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="220dp"
         android:layout_marginTop="1dp"
-        android:text="ACTUALIZAR"
+        android:text="ACTULIZAR"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -321,6 +321,4 @@
         app:layout_constraintTop_toBottomOf="@+id/txtprovincia" />
 
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
-

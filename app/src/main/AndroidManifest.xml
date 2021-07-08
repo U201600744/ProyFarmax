@@ -12,10 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyFarmax"
         android:usesCleartextTraffic="true">
-        <activity android:name=".RegistrarUsuarioActivity" android:label="REGISTRAR USUARIOS" android:parentActivityName=".views.UsuarioActivity"></activity>
-        
-        <activity android:name=".views.RegistrarActivity" android:label="REGISTRAR PRODUCTOS" android:parentActivityName=".views.MainActivity"></activity>
-        <activity android:name=".views.EditarActivity" android:label="EDITAR PRODUCTOS" android:parentActivityName=".views.MainActivity"></activity>
+
+
+
+
+
+        <activity android:name=".RegistrarUsuarioActivity" android:label="REGISTRAR USUARIOS" android:parentActivityName=".views.UsuarioActivity" />
+        <activity android:name=".views.UpdateUserActivity" android:label="EDITAR USUARIOS" android:parentActivityName=".views.UsuarioActivity" />
+        <activity android:name=".views.RegistrarActivity"  android:label="REGISTRAR PRODUCTOS" android:parentActivityName=".views.MainActivity" />
+        <activity android:name=".views.EditarActivity"    android:label="EDITAR PRODUCTOS"    android:parentActivityName=".views.MainActivity" />
+
+
+
+
 
         <activity android:name=".views.UsuarioActivity" >
             <intent-filter>

@@ -7,12 +7,31 @@ public class Usuario {
     private String nombre;
     private String apellido;
     private String correo;
-    private int celular;
+    private String celular;
     private String contrasena;
     private String direccion;
     private String departamento;
     private String provincia;
     private String distrito;
+
+
+    public Usuario() {
+    }
+
+    public Usuario(String id, String tipodocumento, String numerodocumento, String nombre, String apellido, String correo, String celular, String contrasena, String direccion, String departamento, String provincia, String distrito) {
+        this.id = id;
+        this.tipodocumento = tipodocumento;
+        this.numerodocumento = numerodocumento;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.correo = correo;
+        this.celular = celular;
+        this.contrasena = contrasena;
+        this.direccion = direccion;
+        this.departamento = departamento;
+        this.provincia = provincia;
+        this.distrito = distrito;
+    }
 
     public String getId() {
         return id;
@@ -62,11 +81,11 @@ public class Usuario {
         this.correo = correo;
     }
 
-    public int getCelular() {
+    public String getCelular() {
         return celular;
     }
 
-    public void setCelular(int celular) {
+    public void setCelular(String celular) {
         this.celular = celular;
     }
 

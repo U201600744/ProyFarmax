@@ -13,11 +13,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.proyecto.proyfarmax.entities.Producto;
 import com.proyecto.proyfarmax.entities.Usuario;
 import com.proyecto.proyfarmax.views.UsuarioActivity;
 
-import java.util.HashMap;
 import java.util.UUID;
 
 public class RegistrarUsuarioActivity extends AppCompatActivity {
@@ -33,7 +31,7 @@ public class RegistrarUsuarioActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState){
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registrarusuario);
         asignarReferencias();
@@ -58,6 +56,8 @@ public class RegistrarUsuarioActivity extends AppCompatActivity {
             txtdepartamento.setText(getIntent().getStringExtra("departamento"));
             txtprovincia.setText(getIntent().getStringExtra("provincia"));
             txtdistrito.setText(getIntent().getStringExtra("distrito"));
+
+
         }
     }
 
@@ -73,58 +73,47 @@ public class RegistrarUsuarioActivity extends AppCompatActivity {
         txtdepartamento = findViewById(R.id.txtdepartamento);
         txtprovincia = findViewById(R.id.txtprovincia);
         txtdistrito = findViewById(R.id.txtdistrito);
-        btnregistrar =  findViewById(R.id.btnactulizar);
+        btnregistrar = findViewById(R.id.btnactulizar);
         btnregistrar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                if (validarCampos()){
-                    if(registra == true){
+                if (validarCampos()) {
+                    if (registra == true) {
                         registrar();
-                   }else{
-                       actualizar();
+                    } else {
+                        actualizar();
                     }
                 }
             }
         });
     }
+
     private void actualizar() {
-      Usuario u = new Usuario();
-       u.setId(id);
-       tipodocumento = txttipodocumento.getText().toString();
-      numerodocumento = txtnumerodocumento.getText().toString();
-       nombre = txtnombre.getText().toString();
+        Usuario u = new Usuario();
+        u.setId(id);
+        tipodocumento = txttipodocumento.getText().toString();
+        numerodocumento = txtnumerodocumento.getText().toString();
+        nombre = txtnombre.getText().toString();
         apellido = txtapellido.getText().toString();
         correo = txtcorreo.getText().toString();
         celular = txtcelular.getText().toString();
         contrasena = txtcontrasena.getText().toString();
         direccion = txtdireccion.getText().toString();
         departamento = txtdepartamento.getText().toString();
-       provincia = txtprovincia.getText().toString();
-          distrito = txtdistrito.getText().toString();
+        provincia = txtprovincia.getText().toString();
+        distrito = txtdistrito.getText().toString();
 
         u.setTipodocumento(tipodocumento);
         u.setNumerodocumento(numerodocumento);
         u.setNombre(nombre);
         u.setApellido(apellido);
         u.setCorreo(correo);
-       u.setCelular(Integer.parseInt(celular));
+        u.setCelular((celular));
         u.setContrasena(contrasena);
         u.setDireccion(direccion);
         u.setDepartamento(departamento);
         u.setProvincia(provincia);
         u.setDistrito(distrito);
-        //HashMap map = new HashMap();
-        //map.put("tipodocumento", tipodocumento);
-       // map.put("numerodocumento", numerodocumento);
-       // map.put("nombre", nombre);
-       // map.put("apellido", apellido);
-       // map.put("correo", correo);
-       // map.put("celular", celular);
-      //  map.put("contrasena", contrasena);
-       // map.put("direccion", direccion);
-       // map.put("departamento", departamento);
-      //  map.put("provincia", provincia);
-       // map.put("distrito", distrito);
-        //databaseReference.child("Usuario").child(id).updateChildren(map);
+
         databaseReference.child("Usuario").child(u.getId()).setValue(u);
         AlertDialog.Builder ventana = new AlertDialog.Builder(RegistrarUsuarioActivity.this);
         ventana.setTitle("Mensaje Informativo");
@@ -142,7 +131,7 @@ public class RegistrarUsuarioActivity extends AppCompatActivity {
     }
 
 
-    private void registrar(){
+    private void registrar() {
         tipodocumento = txttipodocumento.getText().toString();
         numerodocumento = txtnumerodocumento.getText().toString();
         nombre = txtnombre.getText().toString();
@@ -161,7 +150,7 @@ public class RegistrarUsuarioActivity extends AppCompatActivity {
         u.setNombre(nombre);
         u.setApellido(apellido);
         u.setCorreo(correo);
-        u.setCelular(Integer.parseInt(celular));
+        u.setCelular((celular));
         u.setContrasena(contrasena);
         u.setDireccion(direccion);
         u.setDepartamento(departamento);
@@ -183,13 +172,13 @@ public class RegistrarUsuarioActivity extends AppCompatActivity {
 
     }
 
-    private void inicializarFirebase(){
+    private void inicializarFirebase() {
         FirebaseApp.initializeApp(this);
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference();
     }
 
-    public boolean validarCampos(){
+    public boolean validarCampos() {
         boolean r = true;
         tipodocumento = txttipodocumento.getText().toString();
         numerodocumento = txtnumerodocumento.getText().toString();
@@ -204,50 +193,50 @@ public class RegistrarUsuarioActivity extends AppCompatActivity {
         distrito = txtdistrito.getText().toString();
 
 
-        if (tipodocumento.equals("")){
+        if (tipodocumento.equals("")) {
             txttipodocumento.setError("Tipo de Documento Obligatorio");
             r = false;
         }
 
-        if (numerodocumento.equals("")){
+        if (numerodocumento.equals("")) {
             txtnumerodocumento.setError("Numero de Documento Obligatorio");
             r = false;
         }
 
-        if (nombre.equals("")){
+        if (nombre.equals("")) {
             txtnombre.setError("Nombre Obligatorio");
             r = false;
         }
 
-        if (apellido.equals("")){
+        if (apellido.equals("")) {
             txtapellido.setError("Apellido Obligatorio");
             r = false;
         }
-        if (correo.equals("")){
+        if (correo.equals("")) {
             txtcorreo.setError("Correo Obligatorio");
             r = false;
         }
-        if (celular.equals("")){
+        if (celular.equals("")) {
             txtcelular.setError("Celular Obligatorio");
             r = false;
         }
-        if (contrasena.equals("")){
+        if (contrasena.equals("")) {
             txtcontrasena.setError("Contraseña Obligatorio");
             r = false;
         }
-        if (direccion.equals("")){
+        if (direccion.equals("")) {
             txtdireccion.setError("Direccion Obligatorio");
             r = false;
         }
-        if (departamento.equals("")){
+        if (departamento.equals("")) {
             txtdepartamento.setError("Departamento Obligatorio");
             r = false;
         }
-        if (provincia.equals("")){
+        if (provincia.equals("")) {
             txtprovincia.setError("Provincia Obligatorio");
             r = false;
         }
-        if (distrito.equals("")){
+        if (distrito.equals("")) {
             txtdistrito.setError("Distrito Obligatorio");
             r = false;
         }

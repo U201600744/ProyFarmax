@@ -25,16 +25,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UsuarioActivity extends AppCompatActivity {
-
         RecyclerView recyclerUsuario;
         FloatingActionButton btnNuevo;
-
         FirebaseDatabase firebaseDatabase;
         DatabaseReference databaseReference;
-
         private List<Usuario> listaUsuario = new ArrayList<>();
 
     AdaptadorUsuario adaptador;
+
+    /*
+    Donde tienes los errorres
+
+    por cierto si gustas hacemos llamada por whatsapp si
+     */
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +46,6 @@ public class UsuarioActivity extends AppCompatActivity {
             asignarReferencia();
             inicializarFirebase();
             listarDatos();
-
-
     }
     private void listarDatos(){
             databaseReference.child("Usuario").addValueEventListener(new ValueEventListener() {
@@ -54,16 +55,13 @@ public class UsuarioActivity extends AppCompatActivity {
                     for(DataSnapshot item: snapshot.getChildren()){
                         Usuario u = item.getValue(Usuario.class);
                         listaUsuario.add(u);
-
                     }
                     adaptador = new AdaptadorUsuario(UsuarioActivity.this,listaUsuario);
                     recyclerUsuario.setAdapter(adaptador);
                     recyclerUsuario.setLayoutManager(new LinearLayoutManager(UsuarioActivity.this));
                 }
-
                 @Override
                 public void onCancelled(@NonNull  DatabaseError error) {
-
                 }
             });
     }
@@ -72,7 +70,6 @@ public class UsuarioActivity extends AppCompatActivity {
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference();
     }
-
     private void asignarReferencia() {
         recyclerUsuario = findViewById(R.id.recyclerUsuario);
             btnNuevo = findViewById(R.id.btnNuevo);
