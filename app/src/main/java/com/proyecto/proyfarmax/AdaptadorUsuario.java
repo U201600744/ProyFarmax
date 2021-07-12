@@ -77,7 +77,6 @@ public class AdaptadorUsuario extends RecyclerView.Adapter<AdaptadorUsuario.vist
             @Override
             public void onClick(View view) {
                 eliminar(listaUsuario.get(position).getId(), listaUsuario.get(position).getNombre());
-
             }
         });
     }

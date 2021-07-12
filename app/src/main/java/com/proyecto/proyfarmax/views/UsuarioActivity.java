@@ -70,6 +70,7 @@ public class UsuarioActivity extends AppCompatActivity {
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference();
     }
+
     private void asignarReferencia() {
         recyclerUsuario = findViewById(R.id.recyclerUsuario);
             btnNuevo = findViewById(R.id.btnNuevo);
@@ -78,6 +79,8 @@ public class UsuarioActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     Intent intent = new Intent(UsuarioActivity.this,RegistrarUsuarioActivity.class);
                     startActivity(intent);
+
+                    //startActivity(new Intent(UsuarioActivity.this, RegistrarUsuarioActivity2.class));
                 }
             });
     }

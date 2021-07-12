@@ -15,7 +15,6 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.proyecto.proyfarmax.R;
-import com.proyecto.proyfarmax.RegistrarUsuarioActivity;
 import com.proyecto.proyfarmax.entities.Usuario;
 
 import java.util.UUID;
@@ -67,18 +66,18 @@ public class UpdateUserActivity extends AppCompatActivity {
 
 
     private void asignarReferencias() {
-        txttipodocumento = findViewById(R.id.txttipodocumento);
-        txtnumerodocumento = findViewById(R.id.txtnumerodocumento);
-        txtnombre = findViewById(R.id.txtnombre);
-        txtapellido = findViewById(R.id.txtapellido);
-        txtcorreo = findViewById(R.id.txtcorreo);
-        txtcelular = findViewById(R.id.txtcelular);
-        txtcontrasena = findViewById(R.id.txtcontrasena);
-        txtdireccion = findViewById(R.id.txtdireccion);
-        txtdepartamento = findViewById(R.id.txtdepartamento);
-        txtprovincia = findViewById(R.id.txtprovincia);
-        txtdistrito = findViewById(R.id.txtdistrito);
-        btnupdate = findViewById(R.id.btnactulizar);
+        txttipodocumento = findViewById(R.id.txtTipDocAdmin);
+        txtnumerodocumento = findViewById(R.id.txtNumDocAdmin);
+        txtnombre = findViewById(R.id.txtNomAdmin);
+        txtapellido = findViewById(R.id.txtApeAdmin);
+        txtcorreo = findViewById(R.id.txtCorreoAdmin);
+        txtcelular = findViewById(R.id.txtCelAdmin);
+        txtcontrasena = findViewById(R.id.txtPassNewAdmin);
+        txtdireccion = findViewById(R.id.txtDirAdmin);
+        txtdepartamento = findViewById(R.id.txtDepAdmin);
+        txtprovincia = findViewById(R.id.txtProvAdmin);
+        txtdistrito = findViewById(R.id.txtDisAdmin);
+        btnupdate = findViewById(R.id.btnNewAdmin);
         btnupdate.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
 

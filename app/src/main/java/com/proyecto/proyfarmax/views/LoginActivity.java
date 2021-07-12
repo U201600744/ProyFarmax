@@ -1,11 +1,11 @@
 package com.proyecto.proyfarmax.views;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -13,10 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.FirebaseDatabase;
 import com.proyecto.proyfarmax.R;
 import com.proyecto.proyfarmax.WelcomeActivity;
 
@@ -25,7 +23,8 @@ public class LoginActivity extends AppCompatActivity {
 
     // Context mContext;
     EditText username, pass;
-    Button login, register, recover;
+    Button login, register, reset;
+    TextView txtAdmin;
 
     String email = "";
     String password = "";
@@ -40,11 +39,12 @@ public class LoginActivity extends AppCompatActivity {
         // mContext = this;
         mAuth = FirebaseAuth.getInstance();
 
-        username = findViewById(R.id.txtUser);
-        pass = findViewById(R.id.txtContrasena);
-        login = findViewById(R.id.btnLogin);
+        username = findViewById(R.id.txtUserAdmin);
+        pass = findViewById(R.id.txtPassAdmin);
+        login = findViewById(R.id.btnLoginAdmin);
         register = findViewById(R.id.btnNuevoUsuario);
-        recover = findViewById(R.id.btnOlvidarContraseña);
+        reset = findViewById(R.id.btnOlvidarPassAdmin);
+        txtAdmin = findViewById(R.id.txtAdmin);
 
 
         // if (existSession()){
@@ -79,6 +79,20 @@ public class LoginActivity extends AppCompatActivity {
                 //    Toast.makeText(mContext, "No existe Usuario Reg", Toast.LENGTH_SHORT).show();
                 //    crearusuario(email, password);
 
+            }
+        });
+
+        reset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, ResetContrasenaActivity.class));
+            }
+        });
+
+        txtAdmin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, LoginAdminActivity.class));
             }
         });
     }
