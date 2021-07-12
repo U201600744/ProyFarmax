@@ -22,16 +22,11 @@
             </intent-filter>
         </activity>
 
-
-
-
-
-
         <activity android:name=".WelcomeActivity"></activity>
-        <activity
+        <!--<activity
             android:name=".RegistrarUsuarioActivity"
             android:label="REGISTRAR USUARIOS"
-            android:parentActivityName=".views.UsuarioActivity" />
+            android:parentActivityName=".views.UsuarioActivity" />-->
         <activity
             android:name=".views.UpdateUserActivity"
             android:label="EDITAR USUARIOS"
