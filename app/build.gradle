@@ -43,9 +43,9 @@ dependencies {
     implementation 'com.orhanobut:dialogplus:1.11@aar'
 
 
-    //implementation 'com.firebaseui:firebase-ui-auth:6.4.0'
+    implementation 'com.firebaseui:firebase-ui-auth:6.4.0'
 
-    implementation 'com.google.firebase:firebase-auth:21.0.1'
+    //implementation 'com.google.firebase:firebase-auth:21.0.1'
 
 
 }
