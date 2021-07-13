@@ -15,7 +15,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.proyecto.proyfarmax.R;
+import com.proyecto.proyfarmax.RegistrarUsuarioActivity;
 import com.proyecto.proyfarmax.WelcomeActivity;
 
 public class LoginActivity extends AppCompatActivity {
@@ -29,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     String password = "";
 
     FirebaseAuth mAuth;
+    DatabaseReference databaseReference;
 
 
     @Override
@@ -37,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
        // mContext = this;
         mAuth = FirebaseAuth.getInstance();
+        databaseReference = FirebaseDatabase.getInstance().getReference();
 
             username = findViewById(R.id.txtUser);
             pass = findViewById(R.id.txtContrasena);
@@ -44,6 +49,17 @@ public class LoginActivity extends AppCompatActivity {
             register = findViewById(R.id.btnNuevoUsuario);
             recover = findViewById(R.id.btnOlvidarContraseña);
 
+
+
+
+
+            register.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    startActivity(new Intent(LoginActivity.this, RegistrarUsuarioActivity.class));
+                    finish();
+                }
+            });
 
        // if (existSession()){
        //     Toast.makeText(mContext, "Ya existe sesion", Toast.LENGTH_SHORT).show();

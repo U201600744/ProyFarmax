@@ -9,9 +9,10 @@ import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.proyecto.proyfarmax.views.LoginActivity;
+import com.proyecto.proyfarmax.views.UpdateUserActivity;
 
 public class WelcomeActivity extends AppCompatActivity {
-    Button btnsingOut;
+    Button btnsingOut, btnEditarPersonas ;
     FirebaseAuth mAuth;
 
 
@@ -21,6 +22,14 @@ public class WelcomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_welcome);
 
         mAuth = FirebaseAuth.getInstance();
+        btnEditarPersonas = (Button) findViewById(R.id.btnEditarPersonas);
+        btnEditarPersonas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent( WelcomeActivity.this, UpdateUserActivity.class));
+            }
+        });
+
 
         btnsingOut = (Button)findViewById(R.id.btnsingOut);
 
@@ -32,6 +41,7 @@ public class WelcomeActivity extends AppCompatActivity {
                 finish();
             }
         });
+
 
     }
 }
