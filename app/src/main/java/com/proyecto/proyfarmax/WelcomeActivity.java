@@ -9,9 +9,12 @@ import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.proyecto.proyfarmax.views.LoginActivity;
+import com.proyecto.proyfarmax.views.LoginAdminActivity;
+import com.proyecto.proyfarmax.views.ResetContrasenaActivity;
+import com.proyecto.proyfarmax.views.UpdateUserActivity;
 
 public class WelcomeActivity extends AppCompatActivity {
-    Button btnsingOut;
+    Button btnsingOut, btnActualizarDP;
     FirebaseAuth mAuth;
 
 
@@ -23,7 +26,6 @@ public class WelcomeActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         btnsingOut = (Button)findViewById(R.id.btnsingOut);
-
         btnsingOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -33,5 +35,12 @@ public class WelcomeActivity extends AppCompatActivity {
             }
         });
 
+        btnActualizarDP = findViewById(R.id.btnActualizarDP);
+        btnActualizarDP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(WelcomeActivity.this, UpdateUserActivity.class));
+            }
+        });
     }
 }

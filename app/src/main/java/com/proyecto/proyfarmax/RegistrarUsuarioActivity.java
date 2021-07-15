@@ -62,18 +62,18 @@ public class RegistrarUsuarioActivity extends AppCompatActivity {
     }
 
     private void asignarReferencias() {
-        txttipodocumento = findViewById(R.id.txtTipDocAdmin);
-        txtnumerodocumento = findViewById(R.id.txtNumDocAdmin);
-        txtnombre = findViewById(R.id.txtNomAdmin);
-        txtapellido = findViewById(R.id.txtApeAdmin);
-        txtcorreo = findViewById(R.id.txtCorreoAdmin);
-        txtcelular = findViewById(R.id.txtCelAdmin);
+        txttipodocumento = findViewById(R.id.txtTipDoc);
+        txtnumerodocumento = findViewById(R.id.txtNumDoc);
+        txtnombre = findViewById(R.id.txtNom);
+        txtapellido = findViewById(R.id.txtApe);
+        txtcorreo = findViewById(R.id.txtCorreo);
+        txtcelular = findViewById(R.id.txtCel);
         txtcontrasena = findViewById(R.id.txtPassNewAdmin);
-        txtdireccion = findViewById(R.id.txtDirAdmin);
-        txtdepartamento = findViewById(R.id.txtDepAdmin);
-        txtprovincia = findViewById(R.id.txtProvAdmin);
-        txtdistrito = findViewById(R.id.txtDisAdmin);
-        btnregistrar = findViewById(R.id.btnNewAdmin);
+        txtdireccion = findViewById(R.id.txtDir);
+        txtdepartamento = findViewById(R.id.txtDep);
+        txtprovincia = findViewById(R.id.txtProv);
+        txtdistrito = findViewById(R.id.txtDis);
+        btnregistrar = findViewById(R.id.btnActualizarUser);
         btnregistrar.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 if (validarCampos()) {

@@ -28,6 +28,8 @@ public class AdaptadorUsuario extends RecyclerView.Adapter<AdaptadorUsuario.vist
 
     private Context context;
     private List<Usuario> listaUsuario = new ArrayList<>();
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference databaseReference;
 
     public AdaptadorUsuario(Context context, List<Usuario> lista) {
         this.context = context;
@@ -44,6 +46,7 @@ public class AdaptadorUsuario extends RecyclerView.Adapter<AdaptadorUsuario.vist
 
     @Override
     public void onBindViewHolder(@NonNull AdaptadorUsuario.vistaHolder holder, int position) {
+        //inicializarFirebase();
         holder.filanombre.setText(listaUsuario.get(position).getNombre() + " " + listaUsuario.get(position).getApellido());
         holder.filacelular.setText(listaUsuario.get(position).getCelular() + "");
         holder.filadireccion.setText(listaUsuario.get(position).getDireccion() + "");
@@ -66,8 +69,6 @@ public class AdaptadorUsuario extends RecyclerView.Adapter<AdaptadorUsuario.vist
                 intent.putExtra("provincia", listaUsuario.get(position).getProvincia());
                 intent.putExtra("distrito", listaUsuario.get(position).getDistrito());
                 context.startActivity(intent);
-
-
             }
         });
 
@@ -120,8 +121,12 @@ public class AdaptadorUsuario extends RecyclerView.Adapter<AdaptadorUsuario.vist
             filadireccion = itemView.findViewById(R.id.filadireccion);
             btnEditar = itemView.findViewById(R.id.btnEditar);
             btnElimnar = itemView.findViewById(R.id.btnEliminar);
-
-
         }
+    }
+
+    private void inicializarFirebase(){
+        FirebaseApp.initializeApp(AdaptadorUsuario.this.context);
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference();
     }
 }

@@ -39,18 +39,18 @@ public class RegistrarUsuAdminActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
-        txtTipDocAdmin = findViewById(R.id.txtTipDocAdmin);
-        txtNumDocAdmin = findViewById(R.id.txtNumDocAdmin);
-        txtNomAdmin = findViewById(R.id.txtNomAdmin);
-        txtApeAdmin = findViewById(R.id.txtApeAdmin);
-        txtCorreoAdmin = findViewById(R.id.txtCorreoAdmin);
-        txtCelAdmin = findViewById(R.id.txtCelAdmin);
+        txtTipDocAdmin = findViewById(R.id.txtTipDoc);
+        txtNumDocAdmin = findViewById(R.id.txtNumDoc);
+        txtNomAdmin = findViewById(R.id.txtNom);
+        txtApeAdmin = findViewById(R.id.txtApe);
+        txtCorreoAdmin = findViewById(R.id.txtCorreo);
+        txtCelAdmin = findViewById(R.id.txtCel);
         txtPassNewAdmin = findViewById(R.id.txtPassNewAdmin);
-        txtDirAdmin = findViewById(R.id.txtDirAdmin);
-        txtDepAdmin = findViewById(R.id.txtDepAdmin);
-        txtProvAdmin = findViewById(R.id.txtProvAdmin);
-        txtDisAdmin = findViewById(R.id.txtDisAdmin);
-        btnNewAdmin = findViewById(R.id.btnNewAdmin);
+        txtDirAdmin = findViewById(R.id.txtDir);
+        txtDepAdmin = findViewById(R.id.txtDep);
+        txtProvAdmin = findViewById(R.id.txtProv);
+        txtDisAdmin = findViewById(R.id.txtDis);
+        btnNewAdmin = findViewById(R.id.btnActualizarUser);
         btnNewAdmin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -106,8 +106,8 @@ public class AdaptadorProducto extends RecyclerView.Adapter<AdaptadorProducto.My
 
         TextView tvNombreProducto, tvStock, tvPrecio;
         ImageButton btnEliminar;
-
         ImageButton btnEditar;
+
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 

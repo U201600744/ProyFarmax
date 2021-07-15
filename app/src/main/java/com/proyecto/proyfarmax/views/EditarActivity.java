@@ -54,8 +54,6 @@ public class EditarActivity extends AppCompatActivity {
             txtStock.setText(stock);
             txtPrecio.setText(precio);
             txtDetalle.setText(detalle);
-
-
         }
     }
 
@@ -128,6 +126,7 @@ public class EditarActivity extends AppCompatActivity {
         });
         ventana.create().show();
     }
+
     private void inicializarFirebase(){
         FirebaseApp.initializeApp(this);
         firebaseDatabase = FirebaseDatabase.getInstance();

@@ -94,7 +94,7 @@ public class ResetContrasenaActivity extends AppCompatActivity {
                     ven.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            Intent intent = new Intent(ResetContrasenaActivity.this, ResetContrasenaActivity.class);
+                            Intent intent = new Intent(ResetContrasenaActivity.this, LoginActivity.class);
                             startActivity(intent);
                         }
                     });
@@ -107,7 +107,7 @@ public class ResetContrasenaActivity extends AppCompatActivity {
                     ven.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            Intent intent = new Intent(ResetContrasenaActivity.this, ResetContrasenaActivity.class);
+                            Intent intent = new Intent(ResetContrasenaActivity.this, LoginActivity.class);
                             startActivity(intent);
                         }
                     });

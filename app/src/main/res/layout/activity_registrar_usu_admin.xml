@@ -51,7 +51,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
-        android:id="@+id/txtTipDocAdmin"
+        android:id="@+id/txtTipDoc"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -66,7 +66,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <EditText
-        android:id="@+id/txtNumDocAdmin"
+        android:id="@+id/txtNumDoc"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
@@ -77,7 +77,7 @@
         android:paddingHorizontal="10dp"
         android:drawablePadding="10dp"
         android:textSize="10dp"
-        app:layout_constraintStart_toEndOf="@+id/txtTipDocAdmin"
+        app:layout_constraintStart_toEndOf="@+id/txtTipDoc"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <TextView
@@ -90,10 +90,10 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
 
-        app:layout_constraintTop_toBottomOf="@+id/txtTipDocAdmin" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTipDoc" />
 
     <EditText
-        android:id="@+id/txtNomAdmin"
+        android:id="@+id/txtNom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -116,10 +116,10 @@
         android:text="Apellidos"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNomAdmin" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNom" />
 
     <EditText
-        android:id="@+id/txtApeAdmin"
+        android:id="@+id/txtApe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -144,7 +144,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtPassNewAdmin" />
 
     <EditText
-        android:id="@+id/txtDirAdmin"
+        android:id="@+id/txtDir"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -168,10 +168,10 @@
         android:text="Correo:"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtApeAdmin" />
+        app:layout_constraintTop_toBottomOf="@+id/txtApe" />
 
     <EditText
-        android:id="@+id/txtCorreoAdmin"
+        android:id="@+id/txtCorreo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="11dp"
@@ -196,10 +196,10 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
 
-        app:layout_constraintTop_toBottomOf="@+id/txtCorreoAdmin" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCorreo" />
 
     <EditText
-        android:id="@+id/txtCelAdmin"
+        android:id="@+id/txtCel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -222,10 +222,10 @@
         android:text="Departamento:"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDirAdmin" />
+        app:layout_constraintTop_toBottomOf="@+id/txtDir" />
 
     <EditText
-        android:id="@+id/txtDepAdmin"
+        android:id="@+id/txtDep"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
@@ -244,10 +244,10 @@
         android:text="Provincia:"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/txtDirAdmin" />
+        app:layout_constraintTop_toBottomOf="@+id/txtDir" />
 
     <EditText
-        android:id="@+id/txtProvAdmin"
+        android:id="@+id/txtProv"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
@@ -255,7 +255,7 @@
         android:hint="Seleccione"
         android:textSize="15dp"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toEndOf="@+id/txtDepAdmin"
+        app:layout_constraintStart_toEndOf="@+id/txtDep"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
     <TextView
@@ -266,10 +266,10 @@
         android:text="Distrito:"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/textView16"
-        app:layout_constraintTop_toBottomOf="@+id/txtDirAdmin" />
+        app:layout_constraintTop_toBottomOf="@+id/txtDir" />
 
     <EditText
-        android:id="@+id/txtDisAdmin"
+        android:id="@+id/txtDis"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
@@ -277,7 +277,7 @@
         android:hint="Seleccione"
         android:textSize="15dp"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toEndOf="@+id/txtProvAdmin"
+        app:layout_constraintStart_toEndOf="@+id/txtProv"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
     <TextView
@@ -289,7 +289,7 @@
         android:text="Contraseña:"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCelAdmin" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCel" />
 
     <EditText
         android:id="@+id/txtPassNewAdmin"
@@ -306,7 +306,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
 
     <Button
-        android:id="@+id/btnNewAdmin"
+        android:id="@+id/btnActualizarUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="220dp"
@@ -316,6 +316,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtProvAdmin" />
+        app:layout_constraintTop_toBottomOf="@+id/txtProv" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
