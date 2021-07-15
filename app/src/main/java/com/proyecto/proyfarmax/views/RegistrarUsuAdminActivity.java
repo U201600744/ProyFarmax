@@ -124,7 +124,7 @@ public class RegistrarUsuAdminActivity extends AppCompatActivity {
                     map.put("apellido", ape);
                     map.put("correo", correo);
                     map.put("celular", cel);
-                    map.put("contraseña", pass);
+                    //map.put("contraseña", pass);//no enviar
                     map.put("direccion", dire);
                     map.put("departamento", dep);
                     map.put("provincia", prov);
