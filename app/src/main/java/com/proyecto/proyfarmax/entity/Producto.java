@@ -1,14 +1,17 @@
-package com.proyecto.proyfarmax.entities;
+package com.proyecto.proyfarmax.entity;
 
 import android.widget.ImageView;
 
-public class Producto {
+import java.io.Serializable;
+
+public class Producto implements Serializable {
     private String id;
     private String nombreProducto;
     private int stock;
-    private ImageView foto;
+    private String foto;
     private Double precio;
     private String detalle;
+    private Boolean seleccionado;
 
 
 
@@ -37,11 +40,11 @@ public class Producto {
         this.stock = stock;
     }
 
-    public ImageView getFoto() {
+    public String getFoto() {
         return foto;
     }
 
-    public void setFoto(ImageView foto) {
+    public void setFoto(String foto) {
         this.foto = foto;
     }
 
@@ -60,4 +63,12 @@ public class Producto {
     public void setDetalle(String detalle) {
         this.detalle = detalle;
     }
+    public Boolean getSeleccionado() {
+        return seleccionado;
+    }
+
+    public void setSeleccionado(Boolean seleccionado) {
+        this.seleccionado = seleccionado;
+    }
+
 }

@@ -131,10 +131,5 @@
                 app:srcCompat="@mipmap/ic_eliminar4_foreground" />
 
         </LinearLayout>
-
     </LinearLayout>
-
-
-
-
 </androidx.cardview.widget.CardView>

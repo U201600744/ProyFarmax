@@ -1,16 +1,13 @@
-package com.proyecto.proyfarmax.views;
+package com.proyecto.proyfarmax.view;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageButton;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.FirebaseApp;
@@ -24,7 +21,7 @@ import java.util.ArrayList;
 
 import com.proyecto.proyfarmax.AdaptadorProducto;
 import com.proyecto.proyfarmax.R;
-import com.proyecto.proyfarmax.entities.Producto;
+import com.proyecto.proyfarmax.entity.Producto;
 
 public class MainActivity extends AppCompatActivity {
 
