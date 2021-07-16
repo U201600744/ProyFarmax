@@ -15,6 +15,7 @@ import com.google.firebase.FirebaseApp;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.proyecto.proyfarmax.R;
+import com.proyecto.proyfarmax.WelcomeActivity;
 import com.proyecto.proyfarmax.entities.Usuario;
 
 import java.util.UUID;
@@ -51,7 +52,7 @@ public class UpdateUserActivity extends AppCompatActivity {
                 txtapellido.setText(getIntent().getStringExtra("apellido"));
                 txtcorreo.setText(getIntent().getStringExtra("correo"));
                 txtcelular.setText(getIntent().getStringExtra("celular"));
-                txtcontrasena.setText(getIntent().getStringExtra("contrasena"));
+                //txtcontrasena.setText(getIntent().getStringExtra("contrasena"));
                 txtdireccion.setText(getIntent().getStringExtra("direccion"));
                 txtdepartamento.setText(getIntent().getStringExtra("departamento"));
                 txtprovincia.setText(getIntent().getStringExtra("provincia"));
@@ -159,7 +160,7 @@ public class UpdateUserActivity extends AppCompatActivity {
             ventana.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
-                    Intent intent = new Intent(UpdateUserActivity.this, UsuarioActivity.class);
+                    Intent intent = new Intent(UpdateUserActivity.this, WelcomeActivity.class);
                     startActivity(intent);
                 }
             });

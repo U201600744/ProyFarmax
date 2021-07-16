@@ -16,7 +16,9 @@
             android:name=".views.RegistrarUsuAdminActivity"
             android:parentActivityName=".views.HomeAdminActivity" />
         <activity android:name=".views.HomeAdminActivity" />
-        <activity android:name=".views.LoginAdminActivity" />
+        <activity
+            android:name=".views.LoginAdminActivity"
+            android:parentActivityName=".views.LoginActivity" />
         <activity android:name=".views.ResetContrasenaActivity" />
         <activity android:name=".views.LoginActivity">
             <intent-filter>

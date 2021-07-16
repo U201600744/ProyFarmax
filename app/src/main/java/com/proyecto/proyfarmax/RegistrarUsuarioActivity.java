@@ -168,7 +168,7 @@ public class RegistrarUsuarioActivity extends AppCompatActivity {
         u.setApellido(apellido);
         u.setCorreo(correo);
         u.setCelular((celular));
-        u.setContrasena(contrasena);
+        //u.setContrasena(contrasena);
         u.setDireccion(direccion);
         u.setDepartamento(departamento);
         u.setProvincia(provincia);
