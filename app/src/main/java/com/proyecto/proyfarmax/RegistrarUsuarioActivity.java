@@ -6,11 +6,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.proyecto.proyfarmax.entities.Usuario;
@@ -26,6 +32,7 @@ public class RegistrarUsuarioActivity extends AppCompatActivity {
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+    FirebaseAuth mAuth;
 
     String tipodocumento, numerodocumento, nombre, apellido, correo, celular, contrasena, direccion, departamento, provincia, distrito, id;
 
@@ -35,6 +42,10 @@ public class RegistrarUsuarioActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.registrarusuario);
         asignarReferencias();
+
+        mAuth = FirebaseAuth.getInstance();
+        databaseReference = FirebaseDatabase.getInstance().getReference();
+
         inicializarFirebase();
         verificaRegistrarActulizar();
 
@@ -132,6 +143,12 @@ public class RegistrarUsuarioActivity extends AppCompatActivity {
 
 
     private void registrar() {
+        mAuth.createUserWithEmailAndPassword(correo, contrasena).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+
+
         tipodocumento = txttipodocumento.getText().toString();
         numerodocumento = txtnumerodocumento.getText().toString();
         nombre = txtnombre.getText().toString();
@@ -163,12 +180,16 @@ public class RegistrarUsuarioActivity extends AppCompatActivity {
         ventana.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                Intent intent = new Intent(RegistrarUsuarioActivity.this, UsuarioActivity.class);
+                Intent intent = new Intent(RegistrarUsuarioActivity.this, WelcomeActivity.class);
                 startActivity(intent);
             }
         });
         ventana.create().show();
-
+                }else{
+                    Toast.makeText(RegistrarUsuarioActivity.this, "No se pudo registrar este Usuario", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
     }
 

@@ -13,9 +13,10 @@ import com.proyecto.proyfarmax.views.LoginAdminActivity;
 import com.proyecto.proyfarmax.views.MainActivity;
 import com.proyecto.proyfarmax.views.ResetContrasenaActivity;
 import com.proyecto.proyfarmax.views.UpdateUserActivity;
+import com.proyecto.proyfarmax.views.UpdateUserActivity;
 
 public class WelcomeActivity extends AppCompatActivity {
-    Button btnsingOut, btnActualizarDP, btnSeleccionarProd;
+    Button btnsingOut, btnActualizarDP, btnSeleccionarProd, btnEditarPersonas;
     FirebaseAuth mAuth;
 
 
@@ -25,6 +26,14 @@ public class WelcomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_welcome);
 
         mAuth = FirebaseAuth.getInstance();
+        btnEditarPersonas = (Button) findViewById(R.id.btnEditarPersonas);
+        btnEditarPersonas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent( WelcomeActivity.this, UpdateUserActivity.class));
+            }
+        });
+
 
         btnsingOut = (Button)findViewById(R.id.btnsingOut);
         btnsingOut.setOnClickListener(new View.OnClickListener() {
