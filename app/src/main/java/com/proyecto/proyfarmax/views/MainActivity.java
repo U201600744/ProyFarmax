@@ -18,6 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import com.proyecto.proyfarmax.AdaptadorProducto;
 import com.proyecto.proyfarmax.R;
@@ -30,8 +31,9 @@ public class MainActivity extends AppCompatActivity {
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
-    AdaptadorProducto adaptadorProducto;
-    ArrayList<Producto> list;
+    AdaptadorProducto adaptador;
+    //ArrayList<Producto> list;
+    private List<Producto> list = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +42,10 @@ public class MainActivity extends AppCompatActivity {
         asignarReferencias();
         inicializarFirebase();
         listarDatos();
-
     }
 
     private void asignarReferencias(){
+        recyclerView = findViewById(R.id.recyclerUsuario);
         btnNuevo = findViewById(R.id.btnNuevo);
         btnNuevo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,24 +57,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void listarDatos(){
-        recyclerView = findViewById(R.id.recyclerUsuario);
-        databaseReference = FirebaseDatabase.getInstance().getReference("Producto");
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        list = new ArrayList<>();
-        adaptadorProducto = new AdaptadorProducto(this,list);
-        recyclerView.setAdapter(adaptadorProducto);
-
-        databaseReference.addValueEventListener(new ValueEventListener() {
+        databaseReference.child("Producto").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                    Producto Producto = dataSnapshot.getValue(Producto.class);
-                    list.add(Producto);
+                list.clear();
+                for (DataSnapshot dataSnapshot: snapshot.getChildren()){
+                    Producto pro = dataSnapshot.getValue(Producto.class);
+                    list.add(pro);
                 }
-                adaptadorProducto.notifyDataSetChanged();
-
+                adaptador = new AdaptadorProducto(MainActivity.this, (ArrayList<Producto>) list);
+                recyclerView.setAdapter(adaptador);
+                recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
             }
 
             @Override

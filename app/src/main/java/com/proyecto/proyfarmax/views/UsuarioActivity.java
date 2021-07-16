@@ -47,6 +47,7 @@ public class UsuarioActivity extends AppCompatActivity {
             inicializarFirebase();
             listarDatos();
     }
+
     private void listarDatos(){
             databaseReference.child("Usuario").addValueEventListener(new ValueEventListener() {
                 @Override
@@ -65,6 +66,7 @@ public class UsuarioActivity extends AppCompatActivity {
                 }
             });
     }
+
     private void inicializarFirebase(){
         FirebaseApp.initializeApp(this);
         firebaseDatabase = FirebaseDatabase.getInstance();

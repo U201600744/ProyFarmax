@@ -12,7 +12,7 @@ import com.proyecto.proyfarmax.R;
 
 public class HomeAdminActivity extends AppCompatActivity {
 
-    private Button btnCerrarSesionAdmin, btnNuevoAdmin;
+    private Button btnCerrarSesionAdmin, btnNuevoAdmin, btnListarProdAdmin, btnRegisProdAdmin, btnListarUsuarios;
     private FirebaseAuth mAuth;
 
     @Override
@@ -40,6 +40,29 @@ public class HomeAdminActivity extends AppCompatActivity {
             }
         });
 
+        btnListarProdAdmin = findViewById(R.id.btnListarProdAdmin);
+        btnListarProdAdmin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeAdminActivity.this, MainActivity.class));
+                //finish();
+            }
+        });
 
+        btnRegisProdAdmin = findViewById(R.id.btnRegisProdAdmin);
+        btnRegisProdAdmin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeAdminActivity.this, RegistrarActivity.class));
+            }
+        });
+
+        btnListarUsuarios = findViewById(R.id.btnListarUsuarios);
+        btnListarUsuarios.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeAdminActivity.this, UsuarioActivity.class));
+            }
+        });
     }
 }
