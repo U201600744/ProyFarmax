@@ -27,7 +27,7 @@ public class HomeAdminActivity extends AppCompatActivity {
             public void onClick(View v) {
                 mAuth.signOut();
                 startActivity(new Intent(HomeAdminActivity.this, LoginAdminActivity.class));
-                finish();
+                //finish();
             }
         });
 
@@ -36,7 +36,7 @@ public class HomeAdminActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(HomeAdminActivity.this, RegistrarUsuAdminActivity.class));
-                finish();
+                //finish();
             }
         });
 

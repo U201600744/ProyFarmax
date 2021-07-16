@@ -14,8 +14,7 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".views.RegistrarUsuAdminActivity"
-            android:parentActivityName=".views.HomeAdminActivity">
-        </activity>
+            android:parentActivityName=".views.HomeAdminActivity" />
         <activity android:name=".views.HomeAdminActivity" />
         <activity android:name=".views.LoginAdminActivity" />
         <activity android:name=".views.ResetContrasenaActivity" />
@@ -42,7 +41,9 @@
             android:name=".views.EditarActivity"
             android:label="EDITAR PRODUCTOS"
             android:parentActivityName=".views.MainActivity" />
-        <activity android:name=".views.UsuarioActivity">
+        <activity
+            android:name=".views.UsuarioActivity"
+            android:parentActivityName=".views.HomeAdminActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
