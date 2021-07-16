@@ -8,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -19,7 +18,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.proyecto.proyfarmax.entities.Usuario;
 import com.proyecto.proyfarmax.views.UpdateUserActivity;
-import com.proyecto.proyfarmax.views.UsuarioActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -119,7 +117,7 @@ public class AdaptadorUsuario extends RecyclerView.Adapter<AdaptadorUsuario.vist
             filanombre = itemView.findViewById(R.id.filanombre);
             filacelular = itemView.findViewById(R.id.filacelular);
             filadireccion = itemView.findViewById(R.id.filadireccion);
-            btnEditar = itemView.findViewById(R.id.btnEditar);
+            btnEditar = itemView.findViewById(R.id.btnEditarUsu);
             btnElimnar = itemView.findViewById(R.id.btnEliminar);
         }
     }

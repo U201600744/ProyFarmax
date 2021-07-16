@@ -6,7 +6,7 @@ public class Producto {
     private String id;
     private String nombreProducto;
     private int stock;
-    private ImageView foto;
+    //private ImageView foto;
     private Double precio;
     private String detalle;
 
@@ -34,13 +34,13 @@ public class Producto {
         this.stock = stock;
     }
 
-    public ImageView getFoto() {
+    /*public ImageView getFoto() {
         return foto;
     }
 
     public void setFoto(ImageView foto) {
         this.foto = foto;
-    }
+    }*/
 
     public Double getPrecio() {
         return precio;

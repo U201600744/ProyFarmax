@@ -115,7 +115,7 @@ public class AdaptadorProducto extends RecyclerView.Adapter<AdaptadorProducto.My
             tvStock = itemView.findViewById(R.id.filacelular);
             tvPrecio = itemView.findViewById(R.id.filadireccion);
             btnEliminar = itemView.findViewById(R.id.btnEliminar);
-            btnEditar = itemView.findViewById(R.id.btnEditar);
+            btnEditar = itemView.findViewById(R.id.btnEditarUsu);
         }
     }
 
