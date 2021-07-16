@@ -26,7 +26,7 @@ public class WelcomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_welcome);
 
         mAuth = FirebaseAuth.getInstance();
-        btnEditarPersonas = (Button) findViewById(R.id.btnEditarPersonas);
+        btnEditarPersonas = (Button) findViewById(R.id.btnActualizarDP);
         btnEditarPersonas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
