@@ -69,7 +69,7 @@ public class RegistrarUsuAdminActivity extends AppCompatActivity {
                 if (!tipdoc.isEmpty() || !numdoc.isEmpty() || !nombre.isEmpty() || !ape.isEmpty() || !correo.isEmpty() ||
                     !cel.isEmpty() || !pass.isEmpty() || !dire.isEmpty() || !dire.isEmpty() || !dep.isEmpty() ||
                     !prov.isEmpty() || !dist.isEmpty()){
-                    if (pass.length() >= 6){
+                    if (pass.length() >= 10){
                         registrarAdmin();
                         AlertDialog.Builder ven = new AlertDialog.Builder(RegistrarUsuAdminActivity.this);
                         ven.setTitle("Mensaje Informativo");
@@ -85,7 +85,7 @@ public class RegistrarUsuAdminActivity extends AppCompatActivity {
                     }else{
                         AlertDialog.Builder ven = new AlertDialog.Builder(RegistrarUsuAdminActivity.this);
                         ven.setTitle("Mensaje Informativo");
-                        ven.setMessage("La contraseña debe tener mínimo 6 caracteres");
+                        ven.setMessage("La contraseña debe tener mínimo 10 caracteres");
                         ven.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {

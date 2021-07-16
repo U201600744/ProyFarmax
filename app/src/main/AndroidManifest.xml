@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyFarmax"
         android:usesCleartextTraffic="true">
-        <activity android:name=".views.RegistrarUsuAdminActivity"></activity>
+        <activity
+            android:name=".views.RegistrarUsuAdminActivity"
+            android:parentActivityName=".views.HomeAdminActivity">
+        </activity>
         <activity android:name=".views.HomeAdminActivity" />
         <activity android:name=".views.LoginAdminActivity" />
         <activity android:name=".views.ResetContrasenaActivity" />
